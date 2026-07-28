@@ -1,0 +1,38 @@
+---
+title: "DSAN Alumni Outcomes, 2017 – Present"
+format:
+  dashboard:
+    # theme: cosmo
+    css: styles.css
+    include-in-header:
+      text: |
+        <script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.0.2/maptiler-sdk.umd.min.js"></script>
+        <link href="https://cdn.maptiler.com/maptiler-sdk-js/v4.0.2/maptiler-sdk.css" rel="stylesheet" />
+    include-after-body:
+      text: |
+        <script src="/load-map.js" type="module"></script>
+---
+
+## Row {.fill height=18%}
+
+::: {.valuebox icon="pencil" color="blue"}
+Articles per day
+
+15
+:::
+
+::: {.valuebox icon="graph-down" color="light"}
+Current churn rate
+
+15%
+:::
+
+::: {.valuebox icon="bullseye" color="warning"}
+Churn rate goal
+
+10%
+:::
+
+## Row {height=82%}
+
+<div id="map"></div>

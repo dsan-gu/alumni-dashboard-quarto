@@ -1,0 +1,12 @@
+{
+  "hash": "d199f46e686a435948f0ef4ff70da514",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"DSAN Alumni Outcomes, 2017 – Present\"\nformat:\n  dashboard:\n    # theme: cosmo\n    css: styles.css\n    include-in-header:\n      text: |\n        <script src=\"https://cdn.maptiler.com/maptiler-sdk-js/v4.0.2/maptiler-sdk.umd.min.js\"></script>\n        <link href=\"https://cdn.maptiler.com/maptiler-sdk-js/v4.0.2/maptiler-sdk.css\" rel=\"stylesheet\" />\n    include-after-body:\n      text: |\n        <script src=\"/load-map.js\" type=\"module\"></script>\n---\n\n## Row {height=20%}\n\n::: {#b171c066 .cell content='valuebox' title='Churn rate 2022' execution_count=1}\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n{'icon': 'archive', 'color': 'light', 'value': '17%'}\n```\n:::\n:::\n\n\n::: {#b2d099b6 .cell content='valuebox' title='Current churn rate' execution_count=2}\n\n::: {.cell-output .cell-output-display execution_count=2}\n```\n{'icon': 'graph-down', 'color': 'light', 'value': '14%'}\n```\n:::\n:::\n\n\n::: {#66370b1d .cell content='valuebox' title='Churn rate goal' execution_count=3}\n\n::: {.cell-output .cell-output-display execution_count=3}\n```\n{'icon': 'bullseye', 'color': 'warning', 'value': '10%'}\n```\n:::\n:::\n\n\n## Row {height=80%}\n\n<div id=\"map\"></div>\n\n",
+    "supporting": [
+      "index_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
