@@ -5,6 +5,9 @@ project:
     - assets/geocoded.geojson
     - assets/caslon.otf
 
+website:
+  favicon: favicon.png
+
 # website:
   # title: "DSAN Alumni Outcomes"
   # navbar:

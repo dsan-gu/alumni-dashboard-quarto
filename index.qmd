@@ -3,6 +3,7 @@ title: "DSAN Alumni Outcomes, 2017 – Present"
 format:
   dashboard:
     css: styles.css
+    favicon: favicon.png
     include-in-header:
       text: |
         <script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.0.2/maptiler-sdk.umd.min.js"></script>
