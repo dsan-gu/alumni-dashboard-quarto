@@ -18,37 +18,9 @@ format:
         <script src="/tag-cloud.js"></script>
 ---
 
-## Row {height=25%}
-
-::: {.valuebox icon="mortarboard" color="#041E42"}
-Average Base Salary
-
-[$103,426]{style="color: #BBBCBC;"}
-:::
-
-::: {.valuebox icon="coin" color="#D6D2C4"}
-Average Signing Bonus/Package
-
-$11,500
-:::
-
-::: {.valuebox icon="graph-up-arrow" color="#BBBCBC"}
-Average Salary Increase Post-MS
-
-$26,400
-:::
-
 ## Row {height=75%}
 
-::: {.card title="Most Common Job Titles" width=30%}
-
+<div class='cloud-container'>
 <div class="tag-cloud">
 </div>
-
-:::
-
-::: {#map width=70%}
-
-:::
-
-<div class="dashboard-footer">Data reported as of May 2025 for new graduates, upon graduation</div>
+</div>
