@@ -20,7 +20,7 @@ format:
 ## Row {height=25%}
 
 ::: {.valuebox icon="mortarboard" color="#041E42"}
-[Average Base Salary Upon Graduation]{style="color: #BBBCBC;"}
+Average Base Salary
 
 [$103,426]{style="color: #BBBCBC;"}
 :::
@@ -41,4 +41,4 @@ $26,400
 
 <div id="map"></div>
 
-<div class="dashboard-footer">Data reported as of May 2025 for new graduates</div>
+<div class="dashboard-footer">Data reported as of May 2025 for new graduates, upon graduation</div>

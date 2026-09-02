@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "adobe-caslon-pro";
+  src: url("./assets/caslon.otf") format("opentype");
+}
+
+body {
+  font-family: adobe-caslon-pro, sans-serif;
+}
+
 #map {
   min-width: 100%;
   max-width: 100%;
@@ -44,4 +53,10 @@
   background: rgba(255, 255, 255, 0.85);
   z-index: 1000;
   font-style: italic;
+}
+
+/* div.valuebox:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > p:nth-child(2) */
+
+.valuebox:nth-of-type(1) > * {
+  color: #BBBCBC !important;
 }

@@ -4,7 +4,8 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
   const map = new maplibregl.Map({
       container: 'map',
       // style: 'https://demotiles.maplibre.org/style.json',
-      style: 'https://tiles.openfreemap.org/styles/bright',
+      // style: 'https://tiles.openfreemap.org/styles/bright',
+      style: 'https://americanamap.org/style.json',
       // style: 'https://tiles.openfreemap.org/styles/liberty',
       center: [-103.59179687498357, 40.66995747013945],
       zoom: 3,
@@ -15,12 +16,13 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
       // Add a new source from our GeoJSON data and
       // set the 'cluster' option to true. GL-JS will
       // add the point_count property to your source data.
-      map.addSource('earthquakes', {
+      map.addSource('alumni', {
           type: 'geojson',
           // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
           // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
           // data: 'https://maplibre.org/maplibre-gl-js/docs/assets/earthquakes.geojson',
-          data: 'https://gist.githubusercontent.com/jpowerj/8b6c6d7a18493041e167669e2b25c0a4/raw/ac9e6ddb00ed9260d846c21227aa18fcc04840cc/geocoded.geojson',
+          // data: 'https://gist.githubusercontent.com/jpowerj/8b6c6d7a18493041e167669e2b25c0a4/raw/ac9e6ddb00ed9260d846c21227aa18fcc04840cc/geocoded.geojson',
+          data: './assets/geocoded.geojson',
           cluster: true,
           clusterMaxZoom: 14, // Max zoom to cluster points on
           clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
@@ -29,7 +31,7 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
       map.addLayer({
           id: 'clusters',
           type: 'circle',
-          source: 'earthquakes',
+          source: 'alumni',
           filter: ['has', 'point_count'],
           paint: {
               // Use step expressions (https://maplibre.org/maplibre-style-spec/#expressions-step)
@@ -61,7 +63,7 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
       map.addLayer({
           id: 'cluster-count',
           type: 'symbol',
-          source: 'earthquakes',
+          source: 'alumni',
           filter: ['has', 'point_count'],
           layout: {
               'text-field': '{point_count_abbreviated}',
@@ -73,7 +75,7 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
       map.addLayer({
           id: 'unclustered-point',
           type: 'circle',
-          source: 'earthquakes',
+          source: 'alumni',
           filter: ['!', ['has', 'point_count']],
           paint: {
               'circle-color': '#11b4da',
@@ -89,7 +91,7 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
               layers: ['clusters']
           });
           const clusterId = features[0].properties.cluster_id;
-          const zoom = await map.getSource('earthquakes').getClusterExpansionZoom(clusterId);
+          const zoom = await map.getSource('alumni').getClusterExpansionZoom(clusterId);
           map.easeTo({
               center: features[0].geometry.coordinates,
               zoom
@@ -102,7 +104,7 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
       // description HTML from its properties.
       map.on('click', 'unclustered-point', (e) => {
           const coordinates = e.features[0].geometry.coordinates.slice();
-          const mag = e.features[0].properties.mag;
+          const mag = e.features[0].properties.JobTitle;
           let tsunami;
 
           if (e.features[0].properties.tsunami === 1) {
@@ -121,7 +123,7 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
           new maplibregl.Popup()
               .setLngLat(coordinates)
               .setHTML(
-                  `magnitude: ${mag}<br>Was there a tsunami?: ${tsunami}`
+                  `Job Title: ${JobTitle}`
               )
               .addTo(map);
       });
