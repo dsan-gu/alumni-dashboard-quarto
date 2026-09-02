@@ -4,3 +4,44 @@
   width: 100%;
   height: auto;
 }
+
+.valuebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0.25rem 0.5rem;
+}
+
+.valuebox .value-box-showcase {
+  font-size: 1.1rem;   /* icon */
+  margin-bottom: 0.1rem;
+}
+
+.valuebox .value-box-title {
+  font-size: 0.75rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.valuebox .value-box-value {
+  font-size: 1.3rem;   /* the big number */
+  line-height: 1.1;
+  margin: 0;
+}
+
+.dashboard-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  padding: 2px 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1000;
+  font-style: italic;
+}

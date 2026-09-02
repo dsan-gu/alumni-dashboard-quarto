@@ -2,37 +2,43 @@
 title: "DSAN Alumni Outcomes, 2017 – Present"
 format:
   dashboard:
-    # theme: cosmo
     css: styles.css
     include-in-header:
       text: |
         <script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.0.2/maptiler-sdk.umd.min.js"></script>
         <link href="https://cdn.maptiler.com/maptiler-sdk-js/v4.0.2/maptiler-sdk.css" rel="stylesheet" />
+        <style>
+        .bi-mortarboard {
+          color: #BBBCBC !important;
+        }
+        </style>
     include-after-body:
       text: |
         <script src="/load-map.js" type="module"></script>
 ---
 
-## Row {.fill height=18%}
+## Row {height=25%}
 
-::: {.valuebox icon="pencil" color="blue"}
-Articles per day
+::: {.valuebox icon="mortarboard" color="#041E42"}
+[Average Base Salary Upon Graduation]{style="color: #BBBCBC;"}
 
-15
+[$103,426]{style="color: #BBBCBC;"}
 :::
 
-::: {.valuebox icon="graph-down" color="light"}
-Current churn rate
+::: {.valuebox icon="coin" color="#D6D2C4"}
+Average Signing Bonus/Package
 
-15%
+$11,500
 :::
 
-::: {.valuebox icon="bullseye" color="warning"}
-Churn rate goal
+::: {.valuebox icon="graph-up-arrow" color="#BBBCBC"}
+Average Salary Increase Post-MS
 
-10%
+$26,400
 :::
 
 ## Row {height=82%}
 
 <div id="map"></div>
+
+<div class="dashboard-footer">Data reported as of May 2025 for new graduates</div>

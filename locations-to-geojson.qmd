@@ -1,0 +1,23 @@
+---
+title: "Locations to GeoJSON"
+format:
+  html:
+    df-print: kable
+---
+
+```{r}
+library(tidyverse)
+library(sf)
+loc_df <- read_csv("geocoded.csv")
+loc_df <- loc_df |>
+  drop_na(latitude, longitude)
+loc_df |> head()
+```
+
+```{r}
+loc_sf <- st_as_sf(
+  loc_df,
+  coords = c("longitude","latitude")
+)
+st_write(loc_sf, "geocoded.geojson")
+```

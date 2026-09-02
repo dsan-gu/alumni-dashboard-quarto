@@ -1,5 +1,11 @@
 {
   "index.qmd": {
     "index.html": "ba00b6d4"
+  },
+  "geocode-locations.qmd": {
+    "geocode-locations.html": "f4dbcc12"
+  },
+  "locations-to-geojson.qmd": {
+    "locations-to-geojson.html": "d30f2e21"
   }
 }

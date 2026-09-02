@@ -19,7 +19,8 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
           type: 'geojson',
           // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
           // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-          data: 'https://maplibre.org/maplibre-gl-js/docs/assets/earthquakes.geojson',
+          // data: 'https://maplibre.org/maplibre-gl-js/docs/assets/earthquakes.geojson',
+          data: 'https://gist.githubusercontent.com/jpowerj/8b6c6d7a18493041e167669e2b25c0a4/raw/ac9e6ddb00ed9260d846c21227aa18fcc04840cc/geocoded.geojson',
           cluster: true,
           clusterMaxZoom: 14, // Max zoom to cluster points on
           clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
